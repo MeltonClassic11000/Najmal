@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "outfit-reg";
+  src: url('./../../assets/fonts/Outfit/Outfit-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "outfit-md";
+  src: url('./../../assets/fonts/Outfit/Outfit-Medium.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "outfit-s";
+  src: url('./../../assets/fonts/Outfit/Outfit-SemiBold.ttf') format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "outfit-b";
+  src: url('./../../assets/fonts/Outfit/Outfit-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "outfit-eb";
+  src: url('./../../assets/fonts/Outfit/Outfit-ExtraBold.ttf') format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+// classes
+.outfit-reg {
+  font-family: "outfit-reg", sans-serif !important;
+  font-weight: 400;
+}
+
+.outfit-md {
+  font-family: "outfit-md", sans-serif !important;
+}
+
+.outfit-s {
+  font-family: "outfit-s", sans-serif !important;
+}
+
+.outfit-b {
+  font-family: "outfit-b", sans-serif !important;
+}
+
+.outfit-eb {
+  font-family: "outfit-eb", sans-serif !important;
+}

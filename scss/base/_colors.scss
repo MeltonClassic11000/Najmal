@@ -1,0 +1,64 @@
+.text-white {
+  color: white !important;
+}
+
+.bg-white {
+  background: white;
+}
+
+.text-dark {
+  color: #212529;
+}
+
+.text-black {
+  color: black;
+}
+
+.bg-black {
+  background: black;
+}
+
+// Primary Colors
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+// primary light
+
+.text-primary-light {
+  color: var(--primary-light);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+// Navy blue
+.text-navy-blue {
+  color: var(--navy-blue);
+}
+
+.bg-navy-blue {
+  background-color: var(--navy-blue);
+}
+
+//  GrayLight Colors
+
+.text-gray-light {
+  color: var(--gray-light);
+}
+.bg-gray-light {
+  background: var(--gray-light);
+}
+
+// gray
+.text-gray {
+  color: var(--gray) !important;
+}
+.bg-gray {
+  background-color: var(--gray);
+}

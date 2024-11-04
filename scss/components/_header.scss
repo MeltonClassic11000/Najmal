@@ -1,0 +1,101 @@
+header {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary);
+        width: 100%;
+        height: 2px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 20px 0;
+
+
+        .menu {
+            display: flex;
+            gap: 15px;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: var(--secondary);
+            padding: 30px;
+            width: 230px;
+            height: calc(100vh - 130px);
+            max-height: 285px;
+            overflow: auto;
+            flex-direction: column;
+            border-radius: 20px;
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: all .5s ease-in-out;
+            z-index: 10000;
+
+            li {
+                a {
+                    color: white;
+                    transition: all .4s ease-in-out;
+
+                    &:hover,
+                    &.active {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+
+        .menu.active {
+            transform: scaleY(1);
+        }
+
+        .hamburger {
+            top: 50%;
+            cursor: pointer;
+            width: 24px;
+            height: 3px;
+            position: relative;
+            background-color: var(--secondary);
+            padding: 20px;
+            border-radius: 8px;
+
+            span:nth-child(1) {
+                top: 35%;
+                left: 10px;
+            }
+
+            span:nth-child(2) {
+                top: 65%;
+                left: 10px;
+            }
+
+            span {
+                display: block;
+                width: 50%;
+                height: 2px;
+                border-radius: 4px;
+                background-color: white;
+                position: absolute;
+                left: 0;
+                transition: .4s;
+            }
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 20px;
+        }
+
+        .hamburger.active span:nth-child(2) {
+            transform: rotate(-45deg);
+            top: 20px;
+        }
+
+    }
+}

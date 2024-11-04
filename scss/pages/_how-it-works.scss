@@ -1,0 +1,317 @@
+@keyframes dash {
+    from {
+        stroke-dashoffset: 5000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.banner-sec {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: 200vw;
+        height: 200vw;
+        max-width: 3500px;
+        max-height: 3500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 0;
+        animation: 208s linear hero-bg-anim infinite;
+        pointer-events: none;
+    }
+
+    &::before {
+        background-image: url('./../../assets/img/hero-stroke-bg.webp');
+        left: 20%;
+        top: 10%;
+
+    }
+
+    &::after {
+        right: 20%;
+        bottom: 10%;
+        background-image: url('./../../assets/img/hero-stroke-2-bg.webp');
+    }
+
+    @keyframes hero-bg-anim {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+
+    .obj {
+        position: absolute;
+
+        &.obj-3 {
+            width: 36px;
+            height: 36px;
+            border: 7px solid #52B8BB;
+            left: 10%;
+            top: 40%;
+            border-radius: 50%;
+            animation: 2s circleObjAnim infinite alternate-reverse;
+        }
+
+        &.obj-4 {
+            width: 45px;
+            height: 45px;
+            border: 7px solid #52B8BB;
+            right: 10%;
+            top: 10%;
+            border-radius: 50%;
+            animation: 4s circleObjAnim infinite alternate-reverse;
+        }
+
+        &.obj-5 {
+            width: 25px;
+            height: 25px;
+            background-color: #52B8BB;
+            left: 20%;
+            top: 60%;
+            border-radius: 50%;
+            animation: 4s circleObjAnim infinite alternate-reverse;
+        }
+
+        &.obj-6 {
+            width: 36px;
+            height: 36px;
+            border: 7px solid #FF5E48;
+            right: 22%;
+            top: 8%;
+            border-radius: 50%;
+            animation: 4s circleObjAnim infinite alternate-reverse;
+            animation-delay: 5s;
+        }
+
+        &.obj-7 {
+            width: 15px;
+            height: 15px;
+            background-color: #FF5E48;
+            left: 30%;
+            top: 28%;
+            border-radius: 50%;
+            animation: 4s circleObjAnim infinite alternate-reverse;
+            animation-delay: .5s;
+        }
+
+        &.obj-8 {
+            width: 26px;
+            height: 26px;
+            background-color: #FF5E48;
+            right: 20%;
+            bottom: 20%;
+            border-radius: 50%;
+            animation: 2s circleObjAnim infinite alternate-reverse;
+        }
+
+        @keyframes circleObjAnim {
+            from {
+                transform: translate(0%, 100%);
+            }
+
+            to {
+                transform: translate(0%, 0%);
+            }
+        }
+    }
+}
+
+.trust-sec {
+    .student-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        li {
+            transition: .4s;
+            position: absolute;
+
+            img {
+                height: auto;
+            }
+
+            &.active {
+                transform: scale(1.3);
+            }
+
+            &:nth-child(1) {
+                top: 5%;
+                left: 30%;
+            }
+
+            &:nth-child(2) {
+                top: 8%;
+                left: 50%;
+            }
+
+            &:nth-child(3) {
+                top: 30%;
+                left: 20%;
+            }
+
+            &:nth-child(4) {
+                top: 30%;
+                right: 40%;
+            }
+
+            &:nth-child(5) {
+                top: 50%;
+                right: 20%;
+            }
+
+            &:nth-child(6) {
+                top: 52%;
+                left: 46%;
+            }
+
+            &:nth-child(7) {
+                top: 67%;
+                left: 30%;
+            }
+
+            &:nth-child(8) {
+                top: 69%;
+                left: 56%;
+            }
+
+            &:nth-child(9) {
+                top: 75%;
+                left: 84%;
+            }
+        }
+    }
+
+    .university-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        li {
+            position: absolute;
+            padding: 17px;
+            border: 2px solid var(--primary);
+            border-radius: 44px;
+            display: flex;
+            background-color: white;
+            align-items: center;
+
+            &:nth-child(1) {
+                left: -10%;
+                top: 10%;
+            }
+
+            &:nth-child(2) {
+                right: 5%;
+                top: 14%;
+            }
+
+            &:nth-child(3) {
+                left: 10%;
+                bottom: 14%;
+            }
+
+            p {
+                margin-bottom: 0;
+                color: #676767;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .banner-sec {
+        padding: 40px 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        .main-title {
+            font-size: 36px;
+        }
+
+        .obj {
+            opacity: .4;
+        }
+    }
+
+    .trust-sec {
+        .university-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            li {
+                padding: 10px;
+
+                &:nth-child(1) {
+                    left: 0;
+                }
+
+                .content {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-sec {
+        padding: 40px 0;
+
+        .main-title {
+            font-size: 30px;
+
+            .underline {
+                &::before {
+                    height: 4px;
+                }
+            }
+        }
+    }
+    
+    .trust-sec {
+        .student-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            li {
+                img {
+                    width: 30px;
+                }
+            }
+        }
+
+        .university-list {
+            li {
+                padding: 6px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

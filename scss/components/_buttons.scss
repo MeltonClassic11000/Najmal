@@ -1,0 +1,51 @@
+.btn {
+  font-size: 14px;
+  padding: 16px 40px;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 8px;
+  font-family: "outfit-reg", sans-serif;
+  transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  transition: all .4s ease-in-out;
+  width: fit-content;
+
+  &:hover{
+    background-color: #904bf1d5;
+  }
+}
+
+.btn-outline{
+  border: 1px solid var(--primary);
+  color: white;
+  transition: all .4s ease-in-out;
+
+  &:hover{
+    background-color: var(--primary);
+  }
+}
+
+.btn-white{
+  background-color: rgb(255, 255, 255);
+  color: var(--primary);
+  transition: all .4s ease-in-out;
+
+  &:hover{
+    background-color: rgb(238, 238, 238);
+  }
+}

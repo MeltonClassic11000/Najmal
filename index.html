@@ -14,6 +14,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -49,7 +50,7 @@
     <div class="main">
         <section class="hero pb-0">
             <div class="container">
-                <div class="card-big">
+                <div class="card-big" data-aos="fade-up" data-aos-duration="3000">
                     <div style="max-width: 620px;" class="content">
                         <h1>Your AI-Powered <span class="text-primary">Design</span> Assistant</h1>
                         <p>Unlock your creative potential. Seamlessly generate, customize, and perfect your designs with
@@ -98,7 +99,7 @@
                         effortlessly. Follow these simple steps to turn your vision into reality.</p>
                 </div>
                 <div class="row g-2">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-duration="1000">
                         <div class="card">
                             <div class="icon mb-3">
                                 <img src="./assets/img/creativity-sec-icon-1.png" width="30" height="30px" alt="icon">
@@ -107,7 +108,7 @@
                             <p>Share your project details and let our AI grasp your vision.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card">
                             <div class="icon mb-3">
                                 <img src="./assets/img/creativity-sec-icon-2.png" width="30" height="30px" alt="icon">
@@ -116,7 +117,7 @@
                             <p>Share your project details and let our AI grasp your vision.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-4 col-md-12" data-aos="fade-left" data-aos-duration="1000">
                         <div class="card">
                             <div class="icon mb-3">
                                 <img src="./assets/img/creativity-sec-icon-3.png" width="30" height="30px" alt="icon">
@@ -374,6 +375,7 @@
     </div>
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         const hamburger = document.getElementById('hamburger');
@@ -405,7 +407,7 @@
             });
         });
 
-
+        AOS.init();
 
     </script>
 

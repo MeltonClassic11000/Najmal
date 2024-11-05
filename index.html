@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-
 </head>
 
 <body class="bg-black">
@@ -337,8 +340,7 @@
                 <div class="slider-card">
                     <div class="row gy-lg-0 gx-lg-2 gy-2 gx-md-0">
                         <div class="col-lg-6">
-                            <div style="max-height: 460px;" class="d-flex flex-column h-100 justify-content-center"
-                                data-aos="fade-up" data-aos-duration="1000">
+                            <div style="max-height: 460px;" class="d-flex flex-column h-100 justify-content-center">
                                 <h2>Seamless Tool <span class="text-primary">Integration</span></h2>
                                 <p>NajmAI offers seamless integration with a variety of popular design and project
                                     management
@@ -347,7 +349,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="main-slider" data-aos="fade-in" data-aos-duration="1000">
+                            <div class="main-slider">
                                 <div class="slider-wrapper">
                                     <div class="items item-1"><img src="./assets/img/slider-img1.svg" alt="img"></div>
                                     <div class="items item-2"><img src="./assets/img/slider-img2.svg" alt="img"></div>
@@ -372,10 +374,169 @@
                                     <div class="items item-9"><img src="./assets/img/slider-img4.svg" alt="img"></div>
                                     <div class="items item-10"><img src="./assets/img/slider-img5.svg" alt="img"></div>
                                 </div>
+                                <div class="slider-wrapper">
+                                    <div class="items item-1"><img src="./assets/img/slider-img1.svg" alt="img"></div>
+                                    <div class="items item-2"><img src="./assets/img/slider-img2.svg" alt="img"></div>
+                                    <div class="items item-3"><img src="./assets/img/slider-img3.svg" alt="img"></div>
+                                    <div class="items item-4"><img src="./assets/img/slider-img4.svg" alt="img"></div>
+                                    <div class="items item-5"><img src="./assets/img/slider-img5.svg" alt="img"></div>
+                                    <div class="items item-6"><img src="./assets/img/slider-img1.svg" alt="img"></div>
+                                    <div class="items item-7"><img src="./assets/img/slider-img2.svg" alt="img"></div>
+                                    <div class="items item-8"><img src="./assets/img/slider-img3.svg" alt="img"></div>
+                                    <div class="items item-9"><img src="./assets/img/slider-img4.svg" alt="img"></div>
+                                    <div class="items item-10"><img src="./assets/img/slider-img5.svg" alt="img"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+        </section>
+        <section class="success pb-0">
+            <div class="container">
+                <div class="mb-4 d-flex justify-content-between gap-2 flex-wrap">
+                    <div style="max-width: 680px;">
+                        <h2>Customer Success <span class="text-primary">Stories</span></h2>
+                        <p class="mb-0">Discover how our platform has helped businesses create outstanding content
+                            effortlessly. Hear
+                            directly from our users about their success and satisfaction.</p>
+                    </div>
+                    <div class="other-section">
+                        <button id="custom-next-arrow"><img src="./assets/img/arrow-slider.avif" width="40" height="40"
+                                alt="arrow-img"></button>
+                        <button id="custom-prev-arrow"><img style="transform: rotate(180deg);"
+                                src="./assets/img/arrow-slider.avif" width="40" height="40" alt="arrow-img"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-slider">
+                <div class="slider-items">
+                    <div class="card h-100">
+                        <div class="client d-flex gap-3 align-items-center mb-3">
+                            <img style="border-radius: 50%;" src="./assets/img/client-1.avif" width="60" height="60"
+                                alt="client-image">
+                            <span class="d-block fs-24">Michael S.</span>
+                        </div>
+                        <p>The design suggestions are spot on and the automated features save me so much time. I can
+                            focus more on creativity rather than getting bogged down in details.</p>
+                    </div>
+                </div>
+                <div class="slider-items">
+                    <div class="card h-100">
+                        <div class="client d-flex gap-3 align-items-center mb-3">
+                            <img style="border-radius: 50%;" src="./assets/img/client-2.avif" width="60" height="60"
+                                alt="client-image">
+                            <span class="d-block fs-24">David</span>
+                        </div>
+                        <p>Using this AI-powered design assistant has completely transformed the way I approach my
+                            projects. It’s like having a professional designer on call 24/7. Highly recommend it!
+                        </p>
+                    </div>
+                </div>
+                <div class="slider-items">
+                    <div class="card h-100">
+                        <div class="client d-flex gap-3 align-items-center mb-3">
+                            <img style="border-radius: 50%;" src="./assets/img/client-3.avif" width="60" height="60"
+                                alt="client-image">
+                            <span class="d-block fs-24">David</span>
+                        </div>
+                        <p>Using this AI-powered design assistant has completely transformed the way I approach my
+                            projects. It’s like having a professional designer on call 24/7. Highly recommend it!
+                        </p>
+                    </div>
+                </div>
+                <div class="slider-items">
+                    <div class="card h-100">
+                        <div class="client d-flex gap-3 align-items-center mb-3">
+                            <img style="border-radius: 50%;" src="./assets/img/client-4.avif" width="60" height="60"
+                                alt="client-image">
+                            <span class="d-block fs-24">David</span>
+                        </div>
+                        <p>Using this AI-powered design assistant has completely transformed the way I approach my
+                            projects. It’s like having a professional designer on call 24/7. Highly recommend it!
+                        </p>
+                    </div>
+                </div>
+                <div class="slider-items">
+                    <div class="card h-100">
+                        <div class="client d-flex gap-3 align-items-center mb-3">
+                            <img style="border-radius: 50%;" src="./assets/img/client-5.avif" width="60" height="60"
+                                alt="client-image">
+                            <span class="d-block fs-24">David</span>
+                        </div>
+                        <p>Using this AI-powered design assistant has completely transformed the way I approach my
+                            projects. It’s like having a professional designer on call 24/7. Highly recommend it!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq pb-0">
+            <div class="container">
+                <div class="faq-card">
+                    <div class="row g-2">
+                        <div class="col-lg-6">
+                            <div class="d-flex flex-column h-100 justify-content-center">
+                                <h2>Frequently Asked <span class="text-primary">Questions</span></h2>
+                                <p>Have questions about our AI-Powered Design Assistant? Find answers to the most common
+                                    questions and learn how our platform can enhance your creative process.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="accordion">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="label">How does the AI generate designs?</div>
+                                        <div class="content">
+                                            <p>Our AI analyzes your design brief and uses advanced algorithms to
+                                                generate multiple design concepts tailored to your specifications. It
+                                                takes into account your preferences, style, and project requirements to
+                                                deliver unique and high-quality designs.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="label">What is the design process?</div>
+                                        <div class="content">
+                                            <p>The AI follows a structured process that includes analyzing your brief,
+                                                generating designs, and refining them to match your expectations
+                                                closely. Each step leverages data-driven insights for optimal results.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="label">What is the design process?</div>
+                                        <div class="content">
+                                            <p>The AI follows a structured process that includes analyzing your brief,
+                                                generating designs, and refining them to match your expectations
+                                                closely. Each step leverages data-driven insights for optimal results.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="label">What is the design process?</div>
+                                        <div class="content">
+                                            <p>The AI follows a structured process that includes analyzing your brief,
+                                                generating designs, and refining them to match your expectations
+                                                closely. Each step leverages data-driven insights for optimal results.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="label">What is the design process?</div>
+                                        <div class="content">
+                                            <p>The AI follows a structured process that includes analyzing your brief,
+                                                generating designs, and refining them to match your expectations
+                                                closely. Each step leverages data-driven insights for optimal results.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="Insights pb-0">
             <div class="container">
@@ -444,6 +605,8 @@
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>
         const hamburger = document.getElementById('hamburger');
@@ -476,6 +639,70 @@
         });
 
         AOS.init();
+
+
+        $(document).ready(function () {
+            $('.reviews-slider').slick({
+                centerMode: true,
+                arrows: false,
+                centerPadding: '120px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '70px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 680,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '30px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $('#custom-next-arrow').on('click', function () {
+                $('.reviews-slider').slick('slickNext');
+            });
+
+            $('#custom-prev-arrow').on('click', function () {
+                $('.reviews-slider').slick('slickPrev');
+            });
+        });
+
+        document.querySelectorAll('.accordion .label').forEach(label => {
+            label.addEventListener('click', () => {
+                const item = label.parentElement;
+
+                // Toggle the current accordion item
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    // Close all accordion items
+                    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+
+                    // Open the clicked accordion item
+                    item.classList.add('active');
+                }
+            });
+        });
 
 
 

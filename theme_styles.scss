@@ -1,6 +1,29 @@
 @import url(assets/css/base.css);
 @import url(assets/css/all_components.css);
 
+.card-big {
+  padding: clamp(40px, 10vw, 120px) 40px;
+  background-color: var(--secondary);
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    bottom: -197px;
+    width: 55%;
+    height: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/img/hero-sec-right-img.png');
+    z-index: -1;
+  }
+}
+
 .circle {
   position: relative;
 
@@ -388,7 +411,8 @@
   .order-2 {
     order: 2;
   }
-  .text-md-center{
+
+  .text-md-center {
     text-align: center;
   }
 }

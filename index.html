@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -340,7 +341,8 @@
                 <div class="slider-card">
                     <div class="row gy-lg-0 gx-lg-2 gy-2 gx-md-0">
                         <div class="col-lg-6">
-                            <div style="max-height: 460px;" class="d-flex flex-column h-100 justify-content-center">
+                            <div style="max-height: 460px;" class="d-flex flex-column h-100 justify-content-center"
+                                data-aos="fade-up" data-aos-duration="1000">
                                 <h2>Seamless Tool <span class="text-primary">Integration</span></h2>
                                 <p>NajmAI offers seamless integration with a variety of popular design and project
                                     management
@@ -394,13 +396,13 @@
         <section class="success pb-0">
             <div class="container">
                 <div class="mb-4 d-flex justify-content-between gap-2 flex-wrap">
-                    <div style="max-width: 680px;">
+                    <div style="max-width: 680px;" data-aos="fade-right" data-aos-duration="1000">
                         <h2>Customer Success <span class="text-primary">Stories</span></h2>
                         <p class="mb-0">Discover how our platform has helped businesses create outstanding content
                             effortlessly. Hear
                             directly from our users about their success and satisfaction.</p>
                     </div>
-                    <div class="other-section">
+                    <div class="other-section" data-aos="fade-left" data-aos-duration="1000">
                         <button id="custom-next-arrow"><img src="./assets/img/arrow-slider.avif" width="40" height="40"
                                 alt="arrow-img"></button>
                         <button id="custom-prev-arrow"><img style="transform: rotate(180deg);"
@@ -408,7 +410,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews-slider">
+            <div class="reviews-slider" data-aos="fade-in" data-aos-duration="1000">
                 <div class="slider-items">
                     <div class="card h-100">
                         <div class="client d-flex gap-3 align-items-center mb-3">
@@ -470,7 +472,7 @@
                 </div>
             </div>
         </section>
-        <section class="faq pb-0">
+        <section class="faq pb-0" data-aos="fade-in" data-aos-duration="1000">
             <div class="container">
                 <div class="faq-card">
                     <div class="row g-2">
@@ -547,7 +549,7 @@
                         are crafted to keep you informed and inspired.</p>
                 </div>
                 <div class="row g-2 mb-3">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" >
                         <a href="/" class="blog" data-aos="fade-right" data-aos-duration="1000">
                             <img src="./assets/img/blog-post-img.webp" width="387" height="200" class="img-fluid"
                                 alt="blog-post-img">
@@ -560,7 +562,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" >
                         <a href="/" class="blog" data-aos="fade-down" data-aos-duration="1000">
                             <img src="./assets/img/blog-post-img.webp" width="387" height="200" class="img-fluid"
                                 alt="blog-post-img">
@@ -638,7 +640,9 @@
             });
         });
 
-        AOS.init();
+        setTimeout(function () {
+            AOS.init({ duration: 1000 });
+        }, 100);
 
 
         $(document).ready(function () {

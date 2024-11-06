@@ -432,6 +432,16 @@
             }
         }
     }
+
+    .Journey{
+        .card-big{
+            padding: clamp(40px, 10vw, 80px) clamp(20px, 5vw, 40px);
+            
+            &::after{
+                height: 150%;
+            }
+        }
+    }
 }
 
 

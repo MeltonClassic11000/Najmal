@@ -2,7 +2,7 @@
 @import url(assets/css/all_components.css);
 
 .card-big {
-  padding: clamp(40px, 10vw, 120px) 40px;
+  padding: clamp(40px, 10vw, 120px) clamp(20px, 5vw, 40px);
   background-color: var(--secondary);
   border-radius: 40px;
   position: relative;

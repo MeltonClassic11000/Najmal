@@ -1,144 +1,98 @@
-//################### Navbar Toggler ##########################
-// Get the menu and hamburger elements
-const menu = document.querySelector(".menu");
-const hamburgerMenu = document.querySelector(".hamburger-menu");
+const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('.menu');
 
-// Toggle the 'active' class on menu when hamburger icon is clicked
-hamburgerMenu.addEventListener("click", () => {
-  menu.classList.toggle("active");
+hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
 });
 
 
 
+document.getElementById('billing-toggle').addEventListener('change', function () {
+    const prices = ['10', '20', '50'];  // Monthly prices for cards 1, 2, 3
+    const yearlyMultipliers = [10, 10, 10]; // Multiplier for yearly (e.g., 10x monthly price)
 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  var menuItems = document.querySelectorAll(
-    ".header-bottom .menu > li.menu-item-has-children"
-  );
-  var siteURL = window.location.origin;
-  menuItems.forEach(function (item) {
-    if (item) {
-      var customHTML = document.createElement("div");
-      customHTML.className = "submenu-toggler";
-      var imgElement = document.createElement("img");
-      imgElement.src =
-        siteURL +
-        "/wp-content/themes/nursing-assignment/assets/img/icons/arrow-down.svg";
-      imgElement.alt = "icon";
-      imgElement.width = 13;
-      imgElement.height = 7;
-      customHTML.appendChild(imgElement);
-      item.appendChild(customHTML);
-    }
-  });
-
-  var menuToggler = document.querySelectorAll(
-    ".header-bottom .menu > li.menu-item-has-children .submenu-toggler"
-  );
-  menuToggler.forEach(function (item) {
-    item.addEventListener("click", function () {
-      console.log(4);
-      item.parentElement.querySelector(".sub-menu").classList.toggle("active");
+    document.querySelectorAll('.price').forEach((price, index) => {
+        price.textContent = this.checked
+            ? `$${prices[index] * yearlyMultipliers[index]}`  // Yearly pricing
+            : `$${prices[index]}`;  // Monthly pricing
     });
-  });
+
+    document.querySelectorAll('.duration').forEach(duration => {
+        duration.textContent = this.checked ? 'yr' : 'm';  // Toggle 'yr' or 'm'
+    });
+
+    document.querySelectorAll('.pricing-desc').forEach(desc => {
+        desc.textContent = this.checked ? 'Billed yearly' : 'Free forever';  // Toggle description
+    });
 });
 
+setTimeout(function () {
+    AOS.init({ duration: 1000 });
+}, 100);
 
-document.addEventListener("DOMContentLoaded", function () {
-  var items = document.querySelectorAll('.student-list li');
-  var index = 0;
 
-  function toggleActive() {
-    items.forEach(function (item) {
-      item.classList.remove('active');
+$(document).ready(function () {
+    $('.reviews-slider').slick({
+        centerMode: true,
+        arrows: false,
+        centerPadding: '120px',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '70px',
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
-    items[index].classList.add('active');
-    index = (index + 1) % items.length;
-  }
 
-  setInterval(toggleActive, 1500); // Change interval as needed
+    $('#custom-next-arrow').on('click', function () {
+        $('.reviews-slider').slick('slickNext');
+    });
+
+    $('#custom-prev-arrow').on('click', function () {
+        $('.reviews-slider').slick('slickPrev');
+    });
 });
 
+document.querySelectorAll('.accordion .label').forEach(label => {
+    label.addEventListener('click', () => {
+        const item = label.parentElement;
 
-document.addEventListener("DOMContentLoaded", function () {
-  var accordionItems = document.querySelectorAll('.accordion-item');
+        // Toggle the current accordion item
+        if (item.classList.contains('active')) {
+            item.classList.remove('active');
+        } else {
+            // Close all accordion items
+            document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
 
-  accordionItems.forEach(function (item) {
-    var header = item.querySelector('.accordion-header');
-    var content = item.querySelector('.accordion-content');
-
-    header.addEventListener('click', function () {
-      var isActive = item.classList.contains('active');
-
-      // Close all content sections
-      accordionItems.forEach(function (accItem) {
-        accItem.classList.remove('active');
-        accItem.querySelector('.accordion-content').classList.remove('show');
-      });
-
-      // Toggle active class and show content
-      if (!isActive) {
-        item.classList.add('active');
-        content.classList.add('show');
-      }
+            // Open the clicked accordion item
+            item.classList.add('active');
+        }
     });
-  });
-});
-
-
-
-
-let animationStarted = false; // Flag to track if animation has started
-
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function animateValue(element, start, end, duration) {
-  const range = end - start;
-  let current = start;
-  const increment = 10; // Increase by 10 each time
-  const stepTime = Math.abs(Math.floor(duration / (range / increment))); // Adjust step time accordingly
-  const timer = setInterval(function () {
-    current += increment;
-    if (current >= end) {
-      current = end; // Ensure current value doesn't exceed the target
-      clearInterval(timer);
-    }
-    if (current % 1000 === 0) {
-      element.textContent = (current / 1000) + 'k';
-    } else {
-      element.textContent = current + '+';
-    }
-  }, stepTime);
-}
-
-function startCounterAnimation() {
-  if (!animationStarted) {
-    document.querySelectorAll('.counter').forEach(function (element) {
-      const target = parseInt(element.getAttribute('data-target'));
-      animateValue(element, 0, target, 2000); // Reduce the duration to 1000 milliseconds
-    });
-    animationStarted = true; // Set flag to true to indicate animation has started
-  }
-}
-
-// Check on scroll
-window.addEventListener('scroll', function () {
-  document.querySelectorAll('.counter').forEach(function (element) {
-    if (isElementInViewport(element)) {
-      startCounterAnimation();
-    }
-  });
 });
 
 

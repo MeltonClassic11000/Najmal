@@ -48,6 +48,22 @@ footer{
             }
         }
 
+        .st-line{
+            position: relative;
+            margin-right: 15px;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -10px;
+                background-color: white;
+                height: 16px;
+                width: 2px;
+                pointer-events: none;   
+            }
+        }
+
         .footer-list{
             display: flex;
             gap: 30px;
